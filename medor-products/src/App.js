@@ -1,25 +1,32 @@
-import logo from './logo.svg';
+import React, { useState, useEffect } from 'react';
 import './App.css';
+import ProductList from './ProductList';
+import AddProductForm from './AddProductForm';
 
-function App() {
+const App = () => {
+  const [products, setProducts] = useState([]);
+
+  useEffect(() => {
+    const storedProducts = JSON.parse(localStorage.getItem('products'));
+    if (storedProducts) {
+      setProducts(storedProducts);
+    }
+  }, []);
+
+  useEffect(() => {
+    localStorage.setItem('products', JSON.stringify(products));
+  }, [products]);
+
+  const addProduct = (product) => {
+    setProducts([...products, product]);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ProductList products={products} />
+      <AddProductForm addProduct={addProduct} />
     </div>
   );
-}
+};
 
 export default App;
