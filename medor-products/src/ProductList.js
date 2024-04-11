@@ -4,6 +4,7 @@ import React from 'react';
 const ProductList = ({ products }) => {
     return (
         //seznam produktu
+        <div className='app-form'>
         <div className="product-list"> 
         <h2>Seznam produktů</h2>
         <table>
@@ -24,6 +25,7 @@ const ProductList = ({ products }) => {
                 ))}
             </tbody>
         </table>
+        </div>
         </div>
     );
 };
