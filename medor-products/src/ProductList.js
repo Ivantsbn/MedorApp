@@ -1,6 +1,6 @@
 // src/ProductList.js
 import React from 'react';
-
+// komponenta pro zobrazeni seznamu produku
 const ProductList = ({ products }) => {
     return (
         //seznam produktu
