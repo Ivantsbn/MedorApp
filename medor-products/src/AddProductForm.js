@@ -21,7 +21,6 @@ const AddProductForm = ({ addProduct }) => {
         <div className="add-product-form">
         <h2>Přidat nový produkt</h2>
         <form onSubmit={handleSubmit}>
-            {/* Pole pro zadání názvu produktu */}
             <label>
             Název:
             <input type="text" value={name} onChange={(e) => setName(e.target.value)} />

@@ -12,20 +12,27 @@ body {
   display: flex;
   justify-content: center;
 }
-
+.App {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
 .container {
   max-width: 800px;
   margin: 0 auto;
   padding: 20px;
+  display: flex;
 }
 
 /* Styly pro ProductList */
 .product-list {
   margin-bottom: 20px;
+  padding: 0 20px;
 }
 
 .product-list h2 {
-  margin-bottom: 10px;
+  margin: 35px 0;
 }
 
 .product-list table {
@@ -43,6 +50,14 @@ body {
 /* Styly pro AddProductForm */
 .app-form {
   width: 1000px;
+}
+.product-list-container {
+  flex: 1;
+  margin-right: 20px;
+}
+
+.add-product-container {
+  flex: 1;
 }
 .add-product-form {
   background-color: #f9f9f9;
@@ -81,7 +96,7 @@ body {
 }
 
 .add-product-form button:hover {
-  background-color: #01c929;
+  background-color: #03da2e;
   transition: 100ms ease-in-out;
 }
 .add-product-form button:active {
